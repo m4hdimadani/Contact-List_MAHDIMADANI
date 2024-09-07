@@ -1,0 +1,26 @@
+.input input {
+    background-color: #383838;
+    color: #fff;
+    width: 500px;
+    height: 40px;
+    border-radius: 30px;
+    padding: 10px;
+}
+
+.input input:focus{
+    outline: none;
+    border-color: #4b9d5e;
+}
+
+.input button {
+    width: 100px;
+    height: 30px;
+    border-radius: 20px;
+    background-color: #4b9d5e;
+    color: #fff;
+    cursor: pointer;
+}
+
+.input button:hover {
+    background-color: #5ac372;
+}

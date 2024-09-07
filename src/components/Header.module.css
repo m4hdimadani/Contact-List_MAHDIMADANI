@@ -1,0 +1,12 @@
+.header {
+    margin: 50px 0;
+    text-align: center;
+}
+
+.header span {
+    color: #4b9d5e;
+    cursor: pointer;
+}
+.header span:hover {
+    color: #5ac372;
+}
