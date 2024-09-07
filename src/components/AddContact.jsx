@@ -47,10 +47,13 @@ function AddContact() {
 
   const searchHandler = () => {
     if (search) {
-      const newContact = contact.filter((item) =>
+      const newContact = contacts.filter((item) =>
         item.name.toLowerCase().includes(search)
       );
-      setContacts(newContact)
+      setSearch("");
+      setContacts(newContact);
+    } else {
+      setContacts(contacts);
     }
   };
 
@@ -72,7 +75,11 @@ function AddContact() {
           <CiCirclePlus className={styles.CiCirclePlus} />
         </button>
       </div>
-      <SearchBox search={search} setSearch={setSearch} searchHandler={searchHandler} />
+      <SearchBox
+        search={search}
+        setSearch={setSearch}
+        searchHandler={searchHandler}
+      />
       <div className={styles.alert}>{alert && <p>{alert}</p>}</div>
       <ContactsList contacts={contacts} deleteHandler={deleteHandler} />
     </div>

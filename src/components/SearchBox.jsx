@@ -10,7 +10,7 @@ function SearchBox({ search, setSearch, searchHandler }) {
         value={search}
         onChange={(e) => setSearch(e.target.value.toLowerCase().trim())}
       />
-      <button onClick={() =>searchHandler}>Search</button>
+      <button onClick={() =>{searchHandler()}}>Search</button>
     </div>
   );
 }
