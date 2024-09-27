@@ -1,16 +1,30 @@
-import styles from "./SearchBox.module.css"
+import styles from "./SearchBox.module.css";
 
-function SearchBox({ search, setSearch, searchHandler }) {
-  
+function SearchBox({ search, setSearch, searchHandler, resetContacts }) {
+  const searchChangeHandler = (e) => {
+    const value = e.target.value;
+    setSearch(value);
+
+    if (value === "") {
+      resetContacts();
+    }
+  };
+
   return (
     <div className={styles.input}>
       <input
         type="text"
         placeholder="Search Title"
         value={search}
-        onChange={(e) => setSearch(e.target.value.toLowerCase().trim())}
+        onChange={searchChangeHandler}
       />
-      <button onClick={() =>{searchHandler()}}>Search</button>
+      <button
+        onClick={() => {
+          searchHandler();
+        }}
+      >
+        Search
+      </button>
     </div>
   );
 }
